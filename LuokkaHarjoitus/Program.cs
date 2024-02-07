@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace LuokkaHarjoitus
 {
     
-   
+ 
         class Hooman
         {
             // Define properties of Hooman ie. fields
@@ -51,6 +51,19 @@ namespace LuokkaHarjoitus
             Console.WriteLine("Voi lemmikit ne on elämän suola");
             }
         }
+
+        class CatOwner : Hooman
+        {
+
+            public void SayOpinion()
+            {
+                Console.WriteLine("Kissat ovat itsenäisiä ja pitivät hiiret loitolla"); 
+            }
+
+        }
+
+
+
         internal class Program
         { 
     
@@ -62,14 +75,22 @@ namespace LuokkaHarjoitus
                 // Call the SayOpinion method
                 owner.SayOpinion();
 
-            // Keep the window open until enter pressed
-
+                // Save owners name property to a variable
                 string who = owner.name;
 
+                // Test it by echoing it to a console
                 Console.WriteLine("totesi " + who);
 
-                Console.ReadLine();
+                // Create a new catowner object
+                CatOwner catOwner = new CatOwner();
 
+                // Use catowners SayOpinion method
+                catOwner.SayOpinion();
+
+                // Keep the window open until enter pressed
+                Console.ReadLine(); 
+
+                
 
             
             }
